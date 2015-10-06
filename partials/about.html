@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+	<h3>About page</h3>
+
+	<p>{{message}}</p>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div ng-repeat="myResData in cmsData">
+					test
+					<div class="clearfix  visible-lg-block" ng-if="$index % 4 == 0"></div>
+					<div class="clearfix  visible-md-block" ng-if="$index % 4 == 0"></div>
+					<div class="clearfix  visible-sm-block" ng-if="$index % 3 == 0"></div>
+					<div class="clearfix  visible-xs-block" ng-if="$index % 2 == 0"></div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="search_results_display">
+						<div id="post-title"><a href="{{myResData.post_link}}">{{myResData.post_title}}</a></div>
+						<!--<a href="{{myResData.post_link}}" ng-click="getRecipe(myResData.post_content)"><img id="post_thumb_img" class="img-responsive img-thumbnail" src="{{myResData.image_src}}" alt="{{myResData.post_title}}"/></a>-->
+						<div id="post-image"><a ng-click="getRecipe(myResData.post_content)"><img id="post_thumb_img" class="img-responsive img-thumbnail" src="{{myResData.image_src}}" alt="{{myResData.post_title}}"/></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
