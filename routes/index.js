@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var db = require('mysql');
 var cmsDB = new db.createConnection({
-    host:"97.74.149.176",
-    user:"cms2db",
-    password:"binRush615#cdb",
-    database:"cms2db"
+    host:"***********",
+    user:"*****",
+    password:"*****",
+    database:"*****"
 });
 
 cmsDB.connect(function(err){
