@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
 	<div class="container-fluid">
-		<div id="message-header">
+		<div class="row" id="message-header">
 			<h3 ng-bind-html="message"></h3>
 			<div style="align:center;">
 				<form class="navbar-form" role="search">
@@ -15,14 +15,14 @@
 				</form>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-8" id="search_results">
+		<div class="row" id="content_block">`
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-8" id="search_results">
 				<div dir-paginate="myResData in cmsData| filter:{post_title:query} |itemsPerPage:pageSize" current-page="currentPage" style="list-style-type: none;">
 					<div class="clearfix  visible-lg-block" ng-if="$index % 4 == 0"></div>
-					<div class="clearfix  visible-md-block" ng-if="$index % 4 == 0"></div>
-					<div class="clearfix  visible-sm-block" ng-if="$index % 3 == 0"></div>
+					<div class="clearfix  visible-md-block" ng-if="$index % 3 == 0"></div>
+					<div class="clearfix  visible-sm-block" ng-if="$index % 2 == 0"></div>
 					<div class="clearfix  visible-xs-block" ng-if="$index % 2 == 0"></div>
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="search_results_display">
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="search_results_display">
 						<div id="post-title"><a href="{{myResData.post_link}}">{{myResData.post_title}}</a></div>
 						<!--<a href="{{myResData.post_link}}" ng-click="getRecipe(myResData.post_content)"><img id="post_thumb_img" class="img-responsive img-thumbnail" src="{{myResData.image_src}}" alt="{{myResData.post_title}}"/></a>-->
 						<div id="post-image"><a ng-click="getRecipe(myResData.post_content)"><img id="post_thumb_img" class="img-responsive img-thumbnail" src="{{myResData.image_src}}" alt="{{myResData.post_title}}"/></a></div>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="pagination"><dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" ></dir-pagination-controls></div>
 			</div>
-			<div class="col-sm-4 well" id="recipe_detail">
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-3" id="recipe_detail" ng-style="recipeDetail_Style">
 				<p ng-bind-html="recipe_Content"></p>
 			</div>
 		</div>

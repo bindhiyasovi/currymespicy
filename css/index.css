@@ -2,7 +2,7 @@ div#message-header{
   width:100%;
     background: url('http://currymespicy.dhiyartix.com/wp-content/uploads/2012/01/cropped-cropped-Egg_Muffin_41-1020x262.jpg');
     background-position: center middle;
-     display: inline-block;
+    display: inline-block;
     /*margin:0 25px;
     padding:0 10px;
 
@@ -28,10 +28,14 @@ h3:before {
 
 */
 .row{
-   overflow:hidden;
    margin-right: 0px;
    margin-left: 0px;
-   
+   max-width: 100%;
+}
+#content_block:after{
+  content:"";
+  clear:both;
+  display: block;
 }
 .navbar{
     margin-bottom:0px;
@@ -72,13 +76,21 @@ div.pagination ul{
     border:none;
     border-radius: 0px;      
 }
-#recipe_detail{
+#recipe_detail.col-lg-3{
   height:100%;
   overflow-y:scroll;
   position: absolute;
   padding:10px 2px;
   overflow-x:hidden;
-  right:0px;
+  left:70%;
+}
+#recipe_detail.col-xs-5, #recipe_detail.col-sm-5, #recipe_detail.col-md-5{
+  height:100%;
+  overflow-y:scroll;
+  position: absolute;
+  padding:10px 2px;
+  overflow-x:hidden;
+  left:53%;
 }
 #recipe_detail p{
     font-size:10px;
